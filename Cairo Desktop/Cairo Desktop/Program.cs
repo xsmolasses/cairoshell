@@ -43,9 +43,6 @@ namespace CairoDesktop
                     services.AddSingleton<DesktopManager>();
                     services.AddSingleton<WindowManager>();
 
-                    services.AddSingleton<IWindowService, MenuBarWindowService>();
-                    services.AddSingleton<IWindowService, TaskbarWindowService>();
-
                     services.AddInfrastructureServices(context.Configuration);
 
                     var extensionPaths = new[]

@@ -5,6 +5,7 @@ using System.Windows.Input;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using CairoDesktop.Configuration;
+using CairoDesktop.SupportingClasses;
 using ManagedShell.Common.Helpers;
 using ManagedShell.Interop;
 using ManagedShell.WindowsTray;
@@ -13,10 +14,10 @@ namespace CairoDesktop.Extensions.SystemMenuExtras
 {
     public partial class SystemTray
     {
-        private readonly MenuBar MenuBar;
+        private readonly CairoAppBarWindow MenuBar;
         private readonly NotificationArea _notificationArea;
 
-        public SystemTray(MenuBar menuBar, NotificationArea notificationArea)
+        public SystemTray(CairoAppBarWindow menuBar, NotificationArea notificationArea)
         {
             InitializeComponent();
 

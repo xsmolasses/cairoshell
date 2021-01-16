@@ -1,6 +1,7 @@
 ﻿using CairoDesktop.Configuration;
 using CairoDesktop.ObjectModel;
 using System.Windows.Controls;
+using CairoDesktop.SupportingClasses;
 using ManagedShell.WindowsTray;
 
 namespace CairoDesktop.Extensions.SystemMenuExtras
@@ -15,7 +16,7 @@ namespace CairoDesktop.Extensions.SystemMenuExtras
             _notificationArea = notificationArea;
         }
 
-        public override UserControl StartControl(MenuBar menuBar)
+        public override UserControl StartControl(CairoAppBarWindow menuBar)
         {
             if (!Settings.Instance.EnableSysTray)
             {

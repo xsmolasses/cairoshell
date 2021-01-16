@@ -91,29 +91,11 @@
     <Compile Include="DesktopOverlay.xaml.cs">
       <DependentUpon>DesktopOverlay.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DwmThumbnail.xaml.cs">
-      <DependentUpon>DwmThumbnail.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MenuExtraActionCenter.xaml.cs">
-      <DependentUpon>MenuExtraActionCenter.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MenuExtraClock.xaml.cs">
-      <DependentUpon>MenuExtraClock.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MenuExtraSearch.xaml.cs">
-      <DependentUpon>MenuExtraSearch.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Icon.xaml.cs">
       <DependentUpon>Icon.xaml</DependentUpon>
     </Compile>
     <Compile Include="ObjectModel\MenuExtra.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="ProgramsMenu.xaml.cs">
-      <DependentUpon>ProgramsMenu.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="StacksScroller.xaml.cs">
-      <DependentUpon>StacksScroller.xaml</DependentUpon>
-    </Compile>
     <Compile Include="SupportingClasses\AppBarWindowService.cs" />
     <Compile Include="SupportingClasses\BingWallpaperClient.cs" />
     <Compile Include="SupportingClasses\CairoAppBarWindow.cs" />
@@ -121,30 +103,18 @@
     <Compile Include="SupportingClasses\DesktopManager.cs" />
     <Compile Include="SupportingClasses\EnumUtility.cs" />
     <Compile Include="SupportingClasses\IWindowService.cs" />
-    <Compile Include="SupportingClasses\MenuBarWindowService.cs" />
     <Compile Include="SupportingClasses\PicSumWallpaperClient.cs" />
     <Compile Include="SupportingClasses\ShellManagerService.cs" />
-    <Compile Include="SupportingClasses\TaskbarWindowService.cs" />
     <Compile Include="SupportingClasses\WindowManager.cs" />
     <Compile Include="SupportingClasses\FilePathValidationRule.cs" />
     <Compile Include="SupportingClasses\FolderHelper.cs" />
     <Compile Include="SupportingClasses\DirectoryPathValidationRule.cs" />
     <Compile Include="SupportingClasses\SystemHotKeys.cs" />
-    <Compile Include="MenuExtraVolume.xaml.cs">
-      <DependentUpon>MenuExtraVolume.xaml</DependentUpon>
-    </Compile>
     <Compile Include="SupportingClasses\WindowManagerEventArgs.cs" />
-    <Compile Include="TaskThumbWindow.xaml.cs">
-      <DependentUpon>TaskThumbWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Welcome.xaml.cs">
       <DependentUpon>Welcome.xaml</DependentUpon>
     </Compile>
     <Page Include="DesktopOverlay.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="DwmThumbnail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -157,39 +127,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MenuExtraActionCenter.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MenuExtraClock.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MenuExtraSearch.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <None Include="MiniMeow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <Page Include="ProgramsMenu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MenuExtraVolume.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="StacksScroller.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TaskThumbWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Welcome.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -238,32 +180,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SystemTray.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="TaskButton.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="QuickLaunchButton.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="CairoSettingsWindow.xaml.cs">
       <DependentUpon>CairoSettingsWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="DesktopNavigationToolbar.xaml.cs">
       <DependentUpon>DesktopNavigationToolbar.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="SystemTray.xaml.cs">
-      <DependentUpon>SystemTray.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TaskButton.xaml.cs">
-      <DependentUpon>TaskButton.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="QuickLaunchButton.xaml.cs">
-      <DependentUpon>QuickLaunchButton.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -292,28 +213,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="MenuBar.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="MenuBarShadow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="StacksContainer.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Taskbar.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Compile Include="CairoApplication.xaml.cs">
       <DependentUpon>CairoApplication.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MenuBar.xaml.cs">
-      <DependentUpon>MenuBar.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -325,12 +226,6 @@
     <Compile Include="Desktop.xaml.cs">
       <DependentUpon>Desktop.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MenuBarShadow.xaml.cs">
-      <DependentUpon>MenuBarShadow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="StacksContainer.xaml.cs">
-      <DependentUpon>StacksContainer.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -338,10 +233,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="SupportingClasses\TaskButtonStyleConverter.cs" />
-    <Compile Include="Taskbar.xaml.cs">
-      <DependentUpon>Taskbar.xaml</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -408,10 +299,7 @@
     <Resource Include="Resources\menubarWhite.png" />
     <Resource Include="Resources\nullIcon.png">
     </Resource>
-    <Resource Include="Resources\taskListIcon.png">
-    </Resource>
     <Resource Include="Resources\controlsBrowse.png" />
-    <Resource Include="Resources\taskViewIcon.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\actionCenterDefault.png" />
@@ -424,9 +312,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\cairoMenuDefault.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\desktopOverlayIcon.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Welcome\cairoIcon.png" />

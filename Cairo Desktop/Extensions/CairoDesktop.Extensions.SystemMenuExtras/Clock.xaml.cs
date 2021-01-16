@@ -5,6 +5,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Threading;
+using CairoDesktop.SupportingClasses;
 using ManagedShell.Common.Helpers;
 
 namespace CairoDesktop.Extensions.SystemMenuExtras
@@ -14,7 +15,7 @@ namespace CairoDesktop.Extensions.SystemMenuExtras
         private readonly bool _isPrimaryScreen;
         private static bool isClockHotkeyRegistered;
 
-        public Clock(MenuBar menuBar)
+        public Clock(CairoAppBarWindow menuBar)
         {
             InitializeComponent();
 

@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace CairoDesktop.SupportingClasses
 {
-    class FolderHelper
+    public class FolderHelper
     {
         public static bool OpenLocation(string path)
         {
