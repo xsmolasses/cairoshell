@@ -38,9 +38,6 @@
                     <MenuItem Header="{Binding Path=(l10n:DisplayString.sCairoMenu_AboutCairo)}"
                               Click="AboutCairo"
                               Name="OpenAboutCairo" />
-                    <MenuItem Header="{Binding Path=(l10n:DisplayString.sCairoMenu_CheckForUpdates)}"
-                              Click="CheckForUpdates"
-                              Name="OpenCheckForUpdates" />
                     <Separator />
                     <MenuItem Header="{Binding Path=(l10n:DisplayString.sAppGrabber)}"
                               Click="InitAppGrabberWindow" />
