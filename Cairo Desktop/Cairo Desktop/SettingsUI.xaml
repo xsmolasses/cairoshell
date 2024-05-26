@@ -285,10 +285,6 @@
 
             <TabItem Header="{Binding Path=(l10n:DisplayString.sSettings_General)}">
                 <StackPanel Orientation="Vertical">
-                    <CheckBox Click="EnableAutoUpdates_Click"
-                              Name="chkEnableAutoUpdates">
-                        <Label Content="{Binding Path=(l10n:DisplayString.sSettings_General_UpdateCheck)}" />
-                    </CheckBox>
                     <CheckBox Click="chkRunAtLogOn_Click"
                               Name="chkRunAtLogOn">
                         <Label Content="{Binding Path=(l10n:DisplayString.sSettings_General_RunAtLogOn)}" />
