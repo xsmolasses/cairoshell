@@ -26,7 +26,6 @@ namespace CairoDesktop
     public partial class MenuBar : CairoAppBarWindow, IMenuBar
     {
         internal readonly IAppGrabber _appGrabber;
-        private readonly IApplicationUpdateService _applicationUpdateService;
         private readonly ISettingsUIService _settingsUiService;
 
         private MenuBarShadow shadow;
@@ -35,10 +34,9 @@ namespace CairoDesktop
 
         //private static LowLevelKeyboardListener keyboardListener; // temporarily removed due to stuck key issue, commented out to prevent warnings
         
-        public MenuBar(ICairoApplication cairoApplication, ShellManager shellManager, IWindowManager windowManager, IAppGrabber appGrabber, IApplicationUpdateService applicationUpdateService, ISettingsUIService settingsUiService, AppBarScreen screen, AppBarEdge edge, AppBarMode mode) : base(cairoApplication, shellManager, windowManager, screen, edge, mode, 23)
+        public MenuBar(ICairoApplication cairoApplication, ShellManager shellManager, IWindowManager windowManager, IAppGrabber appGrabber, ISettingsUIService settingsUiService, AppBarScreen screen, AppBarEdge edge, AppBarMode mode) : base(cairoApplication, shellManager, windowManager, screen, edge, mode, 23)
         {
             _appGrabber = appGrabber;
-            _applicationUpdateService = applicationUpdateService;
             _settingsUiService = settingsUiService;
 
             object menuBarWindowAllowsTransparencyResource = CairoApplication.Current.Resources["MenuBarWindowAllowsTransparency"];
@@ -127,11 +125,6 @@ namespace CairoDesktop
 
         private void setupCairoMenu()
         {
-            if (!_applicationUpdateService.IsAvailable)
-            {
-                OpenCheckForUpdates.Visibility = Visibility.Collapsed;
-            }
-
             // Add CairoMenu MenuItems
             if (_cairoApplication.CairoMenu.Count > 0)
             {
@@ -486,11 +479,6 @@ namespace CairoDesktop
             CairoMessage.Show(
                 Common.Localization.DisplayString.sAbout_Version + " " + version + " - " + Common.Localization.DisplayString.sAbout_PreRelease
                 + "\n\n" + String.Format(Common.Localization.DisplayString.sAbout_Copyright, DateTime.Now.Year.ToString()), "Cairo Desktop Environment", CairoMessageImage.Default);
-        }
-
-        private void CheckForUpdates(object sender, RoutedEventArgs e)
-        {
-            _applicationUpdateService?.CheckForUpdates();
         }
 
         private void OpenLogoffBox(object sender, RoutedEventArgs e)
