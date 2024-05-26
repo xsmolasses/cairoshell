@@ -10,25 +10,23 @@ namespace CairoDesktop.Services
         private readonly ICairoApplication _cairoApplication;
         private readonly ShellManagerService _shellManager;
         private readonly IThemeService _themeService;
-        private readonly IApplicationUpdateService _updateService;
 
         internal SettingsUI SettingsUi;
         
-        public SettingsUIService(ICairoApplication cairoApplication, IAppGrabber appGrabber, IApplicationUpdateService updateService,
+        public SettingsUIService(ICairoApplication cairoApplication, IAppGrabber appGrabber,
             ShellManagerService shellManager, IThemeService themeService)
         {
             _appGrabber = appGrabber;
             _cairoApplication = cairoApplication;
             _shellManager = shellManager;
             _themeService = themeService;
-            _updateService = updateService;
         }
         
         public void Show()
         {
             if (SettingsUi == null)
             {
-                SettingsUi = new SettingsUI(_cairoApplication, this, _shellManager, _updateService, _appGrabber, _themeService);
+                SettingsUi = new SettingsUI(_cairoApplication, this, _shellManager, _appGrabber, _themeService);
             }
             
             SettingsUi.Show();
