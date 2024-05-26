@@ -33,7 +33,6 @@ namespace CairoDesktop
     public partial class SettingsUI : Window
     {
         private readonly IAppGrabber _appGrabber;
-        private readonly IApplicationUpdateService _applicationUpdateService;
         private readonly ICairoApplication _cairoApplication;
         private readonly ShellManager _shellManager;
         private readonly IThemeService _themeService;
@@ -42,14 +41,12 @@ namespace CairoDesktop
         internal SettingsUI(ICairoApplication cairoApplication,
             SettingsUIService uiService,
             ShellManagerService shellManagerService,
-            IApplicationUpdateService applicationUpdateService,
             IAppGrabber appGrabber,
             IThemeService themeService)
         {
             InitializeComponent();
 
             _appGrabber = appGrabber;
-            _applicationUpdateService = applicationUpdateService;
             _cairoApplication = cairoApplication;
             _shellManager = shellManagerService.ShellManager;
             _themeService = themeService;
@@ -65,7 +62,6 @@ namespace CairoDesktop
             loadNotficationSettings();
             loadVersionDependentSettings();
 
-            checkUpdateConfig();
             checkTrayStatus();
             checkRunAtLogOn();
             checkIfCanHibernate();
@@ -526,18 +522,6 @@ namespace CairoDesktop
         #endregion
 
         #region Startup checks
-        private void checkUpdateConfig()
-        {
-            if (_applicationUpdateService.IsAvailable)
-            {
-                chkEnableAutoUpdates.IsChecked = _applicationUpdateService.AutomaticUpdatesEnabled;
-            }
-            else
-            {
-                chkEnableAutoUpdates.Visibility = Visibility.Collapsed;
-            }
-        }
-
         private void checkTrayStatus()
         {
             if (!Settings.Instance.EnableTaskbar && !EnvironmentHelper.IsAppRunningAsShell)
@@ -585,18 +569,6 @@ namespace CairoDesktop
             }
         }
         #endregion
-
-        private void EnableAutoUpdates_Click(object sender, RoutedEventArgs e)
-        {
-            if (chkEnableAutoUpdates.IsChecked != null)
-            {
-                _applicationUpdateService.AutomaticUpdatesEnabled = (bool)chkEnableAutoUpdates.IsChecked;
-            }
-            else
-            {
-                _applicationUpdateService.AutomaticUpdatesEnabled = false;
-            }
-        }
 
         private void ShowRestartButton()
         {
